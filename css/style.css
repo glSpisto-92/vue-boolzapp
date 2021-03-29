@@ -155,8 +155,29 @@ body{
 .wrapper_chat{
   height: calc( 100% - 140px );
   background-image: url('../img/mine.jpg');
+  padding: 50px;
 }
 
+  /* section message */
+.message_content_left, .message_content_right{
+  max-width: 400px;
+  max-height: 100%;
+  background: lightgreen;
+  margin: 10px;
+  display: flex;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 14px;
+}
+.message_content_left{
+  justify-content: flex-start;
+}
+.message_content_right{
+
+
+}
+
+  /* section keyboard and input */
 .wrapper_keyboard{
   background: #F3EEEA;
   justify-content: center;
