@@ -73,7 +73,38 @@ body{
   color: #6B7376;
 }
 
+/* section search input */
+.wrapper_search_input{
+  width: 100%;
+  height: 50px;
+  padding: 6px;
+  background: #EAEAEA;
+  display: flex;
+}
+.search{
+  width: 15%;
+  text-align: center;
+  background: #fff;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #EAEAEA;
 
+}
+.search i{
+  color: #B1B1B1;
+}
+.wrapper_search_input input{
+  width: 85%;
+  height: 100%;
+  border: 1px solid #EAEAEA;
+  font-size: 16px;
+  padding-left: 5px;
+}
+.wrapper_search_input input:focus{
+  outline: none;
+}
 
 
 /* wrapper right */
