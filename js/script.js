@@ -5,7 +5,7 @@ let app = new Vue(
       contacts: [
           {
               name: 'Brambilla Fumagalli',
-              avatar: '../img/avatar_1.jpg',
+              avatar: 'img/avatar_1.jpg',
               visible: true,
               messages: [{
                   date: '10/01/2020 15:30:55',
@@ -26,7 +26,7 @@ let app = new Vue(
           },
           {
               name: 'Aldo Baglio',
-              avatar: '../img/avatar_2.jpg',
+              avatar: 'img/avatar_2.jpg',
               visible: true,
               messages: [{
                   date: '20/03/2020 16:30:00',
@@ -47,7 +47,7 @@ let app = new Vue(
           },
           {
               name: 'Giovanni Storti',
-              avatar: '../img/avatar_3.jpg',
+              avatar: 'img/avatar_3.jpg',
               visible: true,
               messages: [{
                   date: '28/03/2020 10:10:40',
@@ -68,7 +68,7 @@ let app = new Vue(
           },
           {
               name: 'Giacomo Poretti',
-              avatar: '../img/avatar_4.jpg',
+              avatar: 'img/avatar_4.jpg',
               visible: true,
               messages: [{
                   date: '10/01/2020 15:30:55',
