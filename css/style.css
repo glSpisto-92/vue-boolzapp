@@ -6,6 +6,7 @@
 
 body{
   height: 100vh;
+  font-family: 'Lato', sans-serif;
   background: linear-gradient(to top, #dbdbd2 86%, #009688 86%);
 }
 
@@ -21,14 +22,40 @@ body{
 
 /* wrapper left */
 .wrapper_left{
-  width: 40%;
+  width: 35%;
   height: 100%;
-  background: lightgreen;
+}
+
+.wrapper_profile_user{
+  display: flex;
+  justify-content: space-between;
+  background: #EAEAEA;
+}
+
+.profile_info_left{
+  height: 60px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+}
+.profile_info_left img {
+  height: 100%;
+  border-radius: 50%;
+}
+
+.profile_info_right {
+  display: flex;
+  align-items: center;
+}
+.profile_info_right i{
+  color: #B1B1B1;
+  font-size: 22px;
+  margin-right: 20px;
 }
 
 /* wrapper right */
 .wrapper_right{
-  width: 60%;
+  width: 65%;
   height: 100%;
   background: lightblue;
 }
