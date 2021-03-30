@@ -173,6 +173,7 @@ body{
   border-radius: 10px;
   padding: 10px;
   font-size: 14px;
+  position: relative;
 }
 .message_received{
   margin-right: auto;
@@ -205,4 +206,9 @@ body{
 ::placeholder{
   color: #B1B1B1;
   padding: 5px;
+}
+
+.data{
+  position: absolute;
+  right: 0;
 }

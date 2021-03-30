@@ -41,7 +41,7 @@ let app = new Vue(
                   {
                       date: '20/03/2020 16:35:00',
                       message: 'Mi piacerebbe ma devo andare a fare la spesa.',
-                      status: 'received'
+                      status: 'sent'
                   }
               ],
           },
@@ -83,21 +83,40 @@ let app = new Vue(
               ],
           },
       ],
-      indexMsg: 0,
+
+      indexElem: 0,
       msg: '',
     },
     methods: {
-      // nextMsg: function(event){
-      //   this.indexMsg = event;
-      // }
+      // cambia contatto
+      clickContact: function(contact){
+        this.indexElem = contact;
+      },
 
       addMsg: function(){
         // se il campo e diverso da vuoto aggiungi elemento
-        if(this.msg != ''){
-          this.contacts.messages.push(this.msg);
+        let newMessage = this.msg;
+
+        if(newMessage != ''){
+
+          this.contacts[this.indexElem].messages.push(
+            {
+              message: newMessage,
+              status: 'sent',
+            },
+          );
           this.msg = '';
         };
-      }
+      },
+      // receivedAuto:
+      // autoMsg: function(setTimeout ()=> {
+      //   this.contacts[this.indexElem].messages.push(
+      //     {
+      //       message: 'ok',
+      //       status: 'received',
+      //     },
+      //   );
+      // }, 1000);
     }
   }
 );

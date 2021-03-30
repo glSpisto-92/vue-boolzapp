@@ -60,7 +60,7 @@
         <div class="wrapper_users">
 
           <!-- info user -->
-          <div class="user"  v-for="(item, index) in contacts">
+          <div class="user"  v-for="(item, index) in contacts" @click="clickContact(index)">
             <img alt="" v-bind:src="item.avatar">
             <a href="#"><small><h3>{{item.name}}</h3></small></a>
           </div>
@@ -75,7 +75,7 @@
             <img src="img/avatar_1.jpg" alt="">
             <!-- content chatting users -->
             <div class="user_chatting_content">
-              <a href="#"><small><h3>Brambilla Fumagalli</h3></small></a>
+              <a href="#"><small><h3>{{contacts[indexElem].name}}</h3></small></a>
               <small><p>Ultimo accesso alle ...</p></small>
             </div>
           </div>
@@ -90,12 +90,12 @@
         <!-- section chat/interaction... -->
         <div class="wrapper_chat">
           <!-- messages  SEND -->
-          <div class="message_send" v-for="item in contacts[indexMsg].messages" :class="item.status == 'sent' ? 'message_send' : 'message_received'">
-            <p>{{msg}}</p>
+          <div class="" v-for="item in contacts[indexElem].messages" :class="item.status == 'sent' ? 'message_send' : 'message_received'">
+            <p>{{item.message}}</p>
           </div>
 
           <!-- messages RECEIVED -->
-          <div class="message_received">
+          <div class="">
             <p></p>
           </div>
         </div>
@@ -111,5 +111,7 @@
     </div>
     <!-- link javascript -->
     <script src="js/script.js" charset="utf-8"></script>
+    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+    <script>(dayjs().format('HH:mm'))</script>
   </body>
 </html>
