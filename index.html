@@ -60,25 +60,9 @@
         <div class="wrapper_users">
 
           <!-- info user -->
-          <div class="user" v-for="(item, index) in contacts">
+          <div class="user"  v-for="(item, index) in contacts">
             <img alt="" v-bind:src="item.avatar">
             <a href="#"><small><h3>{{item.name}}</h3></small></a>
-          </div>
-          <div class="user">
-            <img src="" alt="">
-            <a href="#"><small><h3></h3></small></a>
-          </div>
-          <div class="user">
-            <img src="" alt="">
-            <a href="#"><small><h3></h3></small></a>
-          </div>
-          <div class="user">
-            <img src="" alt="">
-            <a href="#"><small><h3></h3></small></a>
-          </div>
-          <div class="user">
-            <img src="" alt="">
-            <a href="#"><small><h3></h3></small></a>
           </div>
         </div>
       </div>
@@ -105,63 +89,21 @@
 
         <!-- section chat/interaction... -->
         <div class="wrapper_chat">
-          <!-- messages users -->
-          <div class="message_content_users">
-            <p>Lorem ipsum dolor sit amet, conse ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          </div>
-          <!-- messages user -->
-          <div class="my_message_content">
-            <p>lorem </p>
-          </div>
-          <div class="my_message_content">
-            <p>lorem lorem loem lroem</p>
-          </div>
-          <div class="message_content_users">
-            <p>Lorem ipsum dolor sit amet, conse ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          </div>
-          <div class="message_content_users">
-            <p>Lorem ipsum dolor sit amet, conse ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          </div>
-          <div class="my_message_content">
-            <p>lorem lorem loem lroem</p>
-          </div>
-          <div class="my_message_content">
-            <p>lorem lorem loem lroem</p>
-          </div>
-          <div class="message_content_users">
-            <p>Lorem ipsum dolor sit amet, conse ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          </div>
-          <div class="message_content_users">
-            <p>Lorem ipsum dolor sit amet, conse ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          </div>
-          <div class="message_content_users">
-            <p>Lorem ipsum dolor sit amet, conse ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          </div>
-          <div class="my_message_content">
-            <p>lorem lorem loem lroem</p>
-          </div>
-          <div class="my_message_content">
-            <p>lorem lorem loem lroem</p>
-          </div>
-          <div class="message_content_users">
-            <p>Lorem ipsum dolor sit amet, conse ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          </div>
-          <div class="message_content_users">
-            <p>Lorem ipsum dolor sit amet, conse ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          </div>
-          <div class="my_message_content">
-            <p>lorem </p>
-          </div>
-          <div class="my_message_content">
-            <p>lorem lorem loem lroem</p>
+          <!-- messages  SEND -->
+          <div class="message_send" v-for="item in contacts[indexMsg].messages" :class="item.status == 'sent' ? 'message_send' : 'message_received'">
+            <p>{{msg}}</p>
           </div>
 
+          <!-- messages RECEIVED -->
+          <div class="message_received">
+            <p></p>
+          </div>
         </div>
 
         <!-- section keyboard, send message, mic -->
         <div class="wrapper_keyboard">
           <i class="far fa-smile"></i>
-          <input type="text" name="" value="" placeholder="Scrivi un messaggio...">
+          <input type="text" name="" value="" v-model="msg" @keyup.13="addMsg" placeholder="Scrivi un messaggio...">
           <i class="fas fa-microphone"></i>
         </div>
       </div>

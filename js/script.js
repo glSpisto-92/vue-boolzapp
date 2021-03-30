@@ -83,6 +83,21 @@ let app = new Vue(
               ],
           },
       ],
+      indexMsg: 0,
+      msg: '',
+    },
+    methods: {
+      // nextMsg: function(event){
+      //   this.indexMsg = event;
+      // }
+
+      addMsg: function(){
+        // se il campo e diverso da vuoto aggiungi elemento
+        if(this.msg != ''){
+          this.contacts.messages.push(this.msg);
+          this.msg = '';
+        };
+      }
     }
   }
 );

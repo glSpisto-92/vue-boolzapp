@@ -120,6 +120,7 @@ body{
   align-items: flex-start;
   padding: 10px;
   background: #fff;
+  cursor: pointer;
 }
 .user:not(:last-child){
   border-bottom: 1px solid #EAEAEA;
@@ -127,6 +128,9 @@ body{
 .user a{
   text-decoration: none;
   color: #000;
+}
+.user:hover{
+  background: lightgrey;
 }
 
   /* wrapper right */
@@ -160,22 +164,22 @@ body{
 }
 
   /* section message */
-.message_content_users, .my_message_content{
-  max-width: 400px;
+.message_received, .message_send{
+  max-width: 350px;
   max-height: 100%;
-  background: #D5F9BA;
+  background: #fff;
   margin: 10px;
   display: flex;
   border-radius: 10px;
   padding: 10px;
   font-size: 14px;
 }
-.message_content_users{
+.message_received{
   margin-right: auto;
 }
-.my_message_content{
+.message_send{
   margin-left: auto;
-  background: #fff;
+  background: #D5F9BA;
 }
 
   /* section keyboard and input */
