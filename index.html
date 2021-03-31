@@ -53,7 +53,7 @@
           <div class="search">
             <a href="#"><i class="fas fa-search"></i></a>
           </div>
-          <input type="text" name="" value="" placeholder=" Cerca o inizia una nuova chat">
+          <input type="text" name="" value="" v-model="search" placeholder=" Cerca o inizia una nuova chat">
         </div>
 
         <!-- section users -->
@@ -92,11 +92,13 @@
           <!-- messages  SEND -->
           <div class="" v-for="item in contacts[indexElem].messages" :class="item.status == 'sent' ? 'message_send' : 'message_received'">
             <p>{{item.message}}</p>
+            <small class="date" v-show="date">{{date}}</small>
           </div>
 
           <!-- messages RECEIVED -->
           <div class="">
             <p></p>
+            <small></small>
           </div>
         </div>
 
@@ -110,8 +112,8 @@
 
     </div>
     <!-- link javascript -->
-    <script src="js/script.js" charset="utf-8"></script>
     <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+    <script src="js/script.js" charset="utf-8"></script>
     <script>(dayjs().format('HH:mm'))</script>
   </body>
 </html>

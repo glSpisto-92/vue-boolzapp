@@ -86,6 +86,8 @@ let app = new Vue(
 
       indexElem: 0,
       msg: '',
+      date: dayjs().format('YYYY-MM-DD HH:mm'),
+      search: '',
     },
     methods: {
       // cambia contatto
@@ -108,7 +110,7 @@ let app = new Vue(
           this.msg = '';
         };
       },
-      // receivedAuto:
+      // receivedAuto
       // autoMsg: function(setTimeout ()=> {
       //   this.contacts[this.indexElem].messages.push(
       //     {
