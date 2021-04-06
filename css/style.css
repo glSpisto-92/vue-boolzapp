@@ -182,7 +182,9 @@ body{
   margin-left: auto;
   background: #D5F9BA;
 }
-
+.message_received p, .message_send p {
+  margin-bottom: 5px;
+}
   /* section keyboard and input */
 .wrapper_keyboard{
   background: #F3EEEA;

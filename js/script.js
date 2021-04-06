@@ -108,17 +108,20 @@ let app = new Vue(
             },
           );
           this.msg = '';
-        };
-      },
-      // receivedAuto
-      // autoMsg: function(setTimeout ()=> {
-      //   this.contacts[this.indexElem].messages.push(
-      //     {
-      //       message: 'ok',
-      //       status: 'received',
-      //     },
-      //   );
-      // }, 1000);
+
+          setTimeout(() => {
+            let mess = {
+            message: 'we carissimo!',
+            status: 'received',
+          };
+            this.contacts[this.indexElem].messages.push(mess)
+          },  2000);
+
+        }
+      }
     }
   }
 );
+
+// charAt
+// length
