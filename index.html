@@ -53,14 +53,13 @@
           <div class="search">
             <a href="#"><i class="fas fa-search"></i></a>
           </div>
-          <input type="text" name="" value="" v-model="search" placeholder=" Cerca o inizia una nuova chat">
+          <input type="text" name="" value="" v-model="search" placeholder=" Cerca o inizia una nuova chat" v-model="search" @keyup="searchContact">
         </div>
 
         <!-- section users -->
         <div class="wrapper_users">
-
           <!-- info user -->
-          <div class="user"  v-for="(item, index) in contacts" @click="clickContact(index)">
+          <div class="user"  v-for="(item, index) in contacts" @click="clickContact(index)" v-show="item.visible">
             <img alt="" v-bind:src="item.avatar">
             <a href="#"><small><h3>{{item.name}}</h3></small></a>
           </div>

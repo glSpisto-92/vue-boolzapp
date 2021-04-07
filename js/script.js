@@ -116,12 +116,18 @@ let app = new Vue(
           };
             this.contacts[this.indexElem].messages.push(mess)
           },  2000);
-
         }
+      },
+      searchContact: function(){
+        this.contacts.forEach((item, i) => {
+          if(item.name.toLowerCase().includes(this.search.toLowerCase()) == false){
+            item.visible = false;
+          } else {
+            item.visible = true;
+          }
+        });
+
       }
     }
   }
 );
-
-// charAt
-// length
